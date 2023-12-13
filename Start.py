@@ -1,4 +1,5 @@
 import numbers
+import pprint
 
 #1. Creating the function and reading the message file
 # def decode():
@@ -40,15 +41,21 @@ def decode():
     for line in f:
         (key, val) = line.split()
         onlyNumbers[int(key)] = val
-            
+                    
     sortedDic = dict(sorted(onlyNumbers.items()))
+    
     sortedDic.pop(2)
     sortedDic.pop(4)
     sortedDic.pop(5)
-    
+
+    keys = sortedDic.keys()
+    values = sortedDic.values()
+        
+    #print("{"+",\n".join("{!r}:{!r}".format(k, v) for k, v in sortedDic.items()) + "}")   
+    #Print the keys and the values
     for k, v in sortedDic.items():
         print(k,':',v)
-        
+    #Print the values only    
     for values in sortedDic.values():
         print(values)
                  
