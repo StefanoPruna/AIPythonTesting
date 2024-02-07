@@ -36,7 +36,7 @@ import pprint
 
 #3. Create the dictionary
 def decode():
-    f = open("message_file.txt", "r")
+    f = open("coding_qual_input.txt", "r")
     onlyNumbers = {}
     for line in f:
         (key, val) = line.split()
